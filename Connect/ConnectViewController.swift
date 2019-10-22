@@ -55,7 +55,7 @@ class ConnectViewController: UIViewController, WKNavigationDelegate, WKScriptMes
         }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Done") as! DoneViewController
-        nextViewController.eventData = "output was \(message.body)"
+        nextViewController.eventData = "got '\(message.name)' event: \(message.body)"
         self.present(nextViewController, animated:true, completion:nil)
 
     }
